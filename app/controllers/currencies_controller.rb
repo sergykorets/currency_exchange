@@ -103,6 +103,8 @@ class CurrenciesController < ApplicationController
                                            name: currency.name,
                                            sell: currency.sell_price,
                                            buy: currency.buy_price,
+                                           bought_today: currency.bought_today,
+                                           sold_today: currency.sold_today,
                                            total_amount: currency.get_current_amount
                    }
                  }
