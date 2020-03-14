@@ -5,5 +5,8 @@ class PagesController < ApplicationController
     @currencies = Currency.where.not(name: 'UAH')
     @last_update = Version.last.created_at.strftime('%d.%m.%Y %H:%M')
     @admin = current_user&.admin? || current_user&.cashier?
+    pageview = Pageview.first
+    pageview.increment!(:count) unless @admin
+    @pageviews = pageview.count
   end
 end

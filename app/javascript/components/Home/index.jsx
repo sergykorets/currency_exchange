@@ -24,7 +24,7 @@ export default class Home extends React.Component {
             <a href="tel:+380964337090" style={{color: 'white'}}>+38 096 433 7090</a>
           </h3>
           <a style={{color: 'white', fontSize: 2+'rem'}} target='_blank' href="https://www.google.com.ua/maps/place/50%C2%B037'09.6%22N+27%C2%B009'30.4%22E/@50.619344,27.1578835,19z/data=!3m1!4b1!4m9!1m2!2m1!1z0L7QsdC80ZbQvSDQstCw0LvRjtGC!3m5!1s0x0:0x0!7e2!8m2!3d50.619344!4d27.1584322?hl=en&authuser=0">
-            Карта <i className="fa fa-map"></i>
+            <i className="fa fa-map"></i> Карта
           </a>
         </div>
         <hr/>
@@ -51,6 +51,11 @@ export default class Home extends React.Component {
         <hr/>
           <h3 style={{color: 'white'}}>
             Останнє оновлення курсу: {this.props.last_update}
+          </h3>
+        <hr/>
+        <hr/>
+          <h3 style={{color: 'white'}}>
+            Кількість переглядів сторінки: {this.props.pageviews}
           </h3>
         <hr/>
       </div>
