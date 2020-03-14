@@ -49,4 +49,18 @@ class User < ApplicationRecord
     update_attribute(:deleted_at, Time.current)
   end
 
+  def has_acknowlegments?
+    !(collection_acknowleged && replenishment_acknowleged && new_rates_acknowleged)
+  end
+
+  def acknowledgment_type
+    if !collection_acknowleged
+      'collection'
+    elsif !replenishment_acknowleged
+      'replenishment'
+    else
+      'new_rates'
+    end
+  end
+
 end

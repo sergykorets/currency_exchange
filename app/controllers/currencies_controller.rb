@@ -1,4 +1,5 @@
 class CurrenciesController < ApplicationController
+  before_action :authenticate_user!
   before_action :check_user
 
   def index
@@ -42,7 +43,7 @@ class CurrenciesController < ApplicationController
   end
 
   def exchange
-    if current_user&.cashier?
+    if current_user&.cashier? && !current_user&.new_rates_acknowleged
       redirect_to root_path unless current_user.new_rates_acknowleged
       return
     end

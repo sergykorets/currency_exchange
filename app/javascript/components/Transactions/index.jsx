@@ -48,33 +48,35 @@ export default class Actions extends React.Component {
   printAction = (action_id) => {
     if (window.confirm("Роздрукувати чек?")) {
       const content =
-        <div className='container'>
-          <h3 style={{lineHeight: 0.1+'rem'}}>Товариство з обмеженою відповідальністю "Фінансова компанія Октава Фінанс"</h3>
-          <h3 style={{lineHeight: 0.1+'rem'}}>Рівненське відділення №15</h3>
-          <h3 style={{lineHeight: 0.1+'rem'}}>34700 Рівненська обл. м. Корець, пл. Київська, 3</h3>
-          <p style={{textAlign: 'center', marginTop: 3+'rem', marginBottom: 3+'rem'}}>КВИТАНЦІЯ №{this.state.actions[action_id].number}</p>
-          <table>
-            <tbody>
-              <tr>
-                <td style={{paddingRight: 3+'rem'}}>Сума</td>
-                <td>{this.state.actions[action_id].buy_amount} {this.state.actions[action_id].currency_sell}</td>
-              </tr>
-              <tr>
-                <td style={{paddingRight: 3+'rem'}}>До видачі</td>
-                <td>{this.state.actions[action_id].sell_amount} {this.state.actions[action_id].currency_buy}</td>
-              </tr>
-              <tr>
-                <td style={{paddingRight: 3+'rem'}}>Курс</td>
-                <td>{this.state.actions[action_id].rate}</td>
-              </tr>
-              <tr>
-                <td style={{paddingRight: 3+'rem'}}>Дата</td>
-                <td>{this.state.actions[action_id].created_at}</td>
-              </tr>
-            </tbody>
-          </table>
-          <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 6+'rem'}}>
-            <span>ФІСКАЛЬНИЙ ЧЕК</span><span>ІКС</span>
+        <div style={{width: 300+'px'}} className='container'>
+          <div className='row'>
+            <p style={{lineHeight: 1+'rem', marginBottom: 1+'px', fontSize: 0.75+'rem', paddingBottom: 0}}>Товариство з обмеженою відповідальністю "Фінансова компанія Октава Фінанс"</p>
+            <p style={{lineHeight: 1+'rem', marginBottom: 1+'px', fontSize: 0.75+'rem', paddingBottom: 0}}>Рівненське відділення №15</p>
+            <p style={{lineHeight: 1+'rem', fontSize: 0.75+'rem'}}>34700 Рівненська обл. м. Корець, пл. Київська, 3</p>
+            <p style={{textAlign: 'center', marginTop: 1+'rem', marginBottom: 1+'rem'}}>КВИТАНЦІЯ №{this.state.actions[action_id].number}</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td style={{paddingRight: 3+'rem'}}>Сума</td>
+                  <td>{this.state.actions[action_id].buy_amount} {this.state.actions[action_id].currency_sell}</td>
+                </tr>
+                <tr>
+                  <td style={{paddingRight: 3+'rem'}}>До видачі</td>
+                  <td>{this.state.actions[action_id].sell_amount} {this.state.actions[action_id].currency_buy}</td>
+                </tr>
+                <tr>
+                  <td style={{paddingRight: 3+'rem'}}>Курс</td>
+                  <td>{this.state.actions[action_id].rate}</td>
+                </tr>
+                <tr>
+                  <td style={{paddingRight: 3+'rem'}}>Дата</td>
+                  <td>{this.state.actions[action_id].created_at}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 6+'rem'}}>
+              <span>ФІСКАЛЬНИЙ ЧЕК</span><span>ІКС</span>
+            </div>
           </div>
         </div>;
       const pri = document.getElementById("ifmcontentstoprint").contentWindow;

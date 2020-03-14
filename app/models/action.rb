@@ -11,4 +11,10 @@ class Action < ApplicationRecord
 
   validates :amount, numericality: { greater_than: 0 }, if: -> { collection? || replenishment? }
   validates :buy_amount, numericality: { greater_than: 0 }, if: -> { exchange? }
+
+  after_create :acknowledge_cashiers, if: -> { collection? || replenishment? }
+
+  def acknowledge_cashiers
+    User.cashier.update_all("#{self.action_type}_acknowleged": false)
+  end
 end

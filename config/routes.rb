@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   end
   get 'reactivate/edit', 'reactivate#edit'
   put 'reactivate/update', 'reactivate#update'
-  patch 'users/submit_new_rates_acknowledgment', 'users#submit_new_rates_acknowledgment'
+  patch 'users/submit_acknowledgment', 'users#submit_acknowledgment'
+  get 'bodia_kurs', to: 'pages#index'
 end
