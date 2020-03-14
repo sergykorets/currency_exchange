@@ -21,7 +21,7 @@ export default class Home extends React.Component {
             <span style={{fontSize: 1+'rem'}}>Bodia kurs</span>
           </span>
           <h3 style={{color: 'white'}}>
-            <a href="tel:+900300400" style={{color: 'white'}}>+38 096 433 7090</a>
+            <a href="tel:+380964337090" style={{color: 'white'}}>+38 096 433 7090</a>
           </h3>
           <a style={{color: 'white', fontSize: 1.5+'rem'}} target='_blank' href="https://www.google.com.ua/maps/place/50%C2%B037'09.6%22N+27%C2%B009'30.4%22E/@50.619344,27.1578835,19z/data=!3m1!4b1!4m9!1m2!2m1!1z0L7QsdC80ZbQvSDQstCw0LvRjtGC!3m5!1s0x0:0x0!7e2!8m2!3d50.619344!4d27.1584322?hl=en&authuser=0">
             Карта <i className="fa fa-map"></i>
