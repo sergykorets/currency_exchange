@@ -15,15 +15,15 @@ export default class Home extends React.Component {
     return (
       <div className="container">
         <hr/>
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
           <span style={{color: 'white'}} onClick={() => this.backToMain()}>
-            <i className="fa fa-euro" style={{fontSize: 3+'rem'}}></i>
-            <span style={{fontSize: 1+'rem'}}>Bodia kurs</span>
+            <i className="fa fa-euro" style={{fontSize: 7+'rem'}}></i>
+            <span style={{fontSize: 2+'rem'}}>Bodia kurs</span>
           </span>
-          <h3 style={{color: 'white'}}>
+          <h3 style={{color: 'white', fontSize: 3+'rem'}}>
             <a href="tel:+380964337090" style={{color: 'white'}}>+38 096 433 7090</a>
           </h3>
-          <a style={{color: 'white', fontSize: 1.5+'rem'}} target='_blank' href="https://www.google.com.ua/maps/place/50%C2%B037'09.6%22N+27%C2%B009'30.4%22E/@50.619344,27.1578835,19z/data=!3m1!4b1!4m9!1m2!2m1!1z0L7QsdC80ZbQvSDQstCw0LvRjtGC!3m5!1s0x0:0x0!7e2!8m2!3d50.619344!4d27.1584322?hl=en&authuser=0">
+          <a style={{color: 'white', fontSize: 2+'rem'}} target='_blank' href="https://www.google.com.ua/maps/place/50%C2%B037'09.6%22N+27%C2%B009'30.4%22E/@50.619344,27.1578835,19z/data=!3m1!4b1!4m9!1m2!2m1!1z0L7QsdC80ZbQvSDQstCw0LvRjtGC!3m5!1s0x0:0x0!7e2!8m2!3d50.619344!4d27.1584322?hl=en&authuser=0">
             Карта <i className="fa fa-map"></i>
           </a>
         </div>
@@ -39,7 +39,7 @@ export default class Home extends React.Component {
           <tbody>
           { this.props.currencies.map((currency) => {
             return (
-              <tr key={currency.id}>
+              <tr key={currency.id} style={{lineHeight: 10+'rem'}}>
                 <td><img className='currency-icon' src={`/images/${currency.name}.svg`} style={{height: 5+'rem'}}/>{currency.name}</td>
                 <td>{currency.buy_price}</td>
                 <td>{currency.sell_price}</td>
