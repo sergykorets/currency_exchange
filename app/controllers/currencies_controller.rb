@@ -3,7 +3,7 @@ class CurrenciesController < ApplicationController
   before_action :check_user
 
   def index
-    @currencies = Currency.all.each_with_object({}) { |currency, hash|
+    @currencies = Currency.all.sort_by(&:created_at).each_with_object({}) { |currency, hash|
       hash[currency.id] = { id: currency.id,
                             name: currency.name,
                             sell: currency.sell_price,
