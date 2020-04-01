@@ -65,7 +65,7 @@ export default class Versions extends React.Component {
               activePage={this.state.activePage}
               itemsCountPerPage={10}
               totalItemsCount={this.state.count}
-              pageRangeDisplayed={Math.ceil(this.state.count/10)}
+              pageRangeDisplayed={9}
               onChange={this.handlePageChange}
             />
             <hr/>
