@@ -49,6 +49,7 @@ gem 'paper_trail'
 gem 'paper_trail-association_tracking'
 gem 'aws-sdk', '~> 2.3'
 gem 'kaminari'
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 group :development, :test do
   gem 'pry-rails'
